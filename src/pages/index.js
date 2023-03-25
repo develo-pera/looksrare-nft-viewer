@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { Text } from "@chakra-ui/react";
+import Navigation from "@/components/common/navigation/navigation";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
+        <Navigation />
         <Text>LooksRare NFT Viewer</Text>
       </main>
     </>
