@@ -11,6 +11,9 @@ const styles = {
         background: "var(--bg-color)",
         color: "var(--text-color)",
       },
+      a: {
+        color: "var(--primary-green)",
+      }
     },
   }
 
