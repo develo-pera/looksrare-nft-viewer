@@ -1,5 +1,5 @@
 import { ConnectButton } from "@rainbow-me/rainbowkit";
-import { Button } from "@chakra-ui/react";
+import { Button, Text } from "@chakra-ui/react";
 import WalletIcon from "@/components/common/icons/wallet";
 
 const renderButton = ({
@@ -47,7 +47,9 @@ const renderButton = ({
       onClick={openAccountModal}
 
     >
-      {account.displayName}
+      <Text noOfLines={1}>
+        {account.displayName}
+      </Text>
     </Button>
   );
 }

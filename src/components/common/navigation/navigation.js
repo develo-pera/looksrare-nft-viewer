@@ -10,10 +10,12 @@ const Navigation = () => {
       <Flex
         justifyContent="space-between"
         alignItems="center"
+        gap={10}
       >
         <Link as={NextLink} href="/">
           <Image
             width="120px"
+            minWidth="120px"
             src="/logo.svg"
             alt="LooksRare NFT viewer logo"
           />
