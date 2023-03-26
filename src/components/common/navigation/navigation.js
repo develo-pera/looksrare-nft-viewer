@@ -1,26 +1,23 @@
-import { Button, Flex, Image } from "@chakra-ui/react";
-import WalletIcon from "@/components/common/icons/wallet";
+import { Flex, Image } from "@chakra-ui/react";
 import ContentWrapper from "@/components/common/content-wrapper/contentWrapper";
+import CustomConnectButton from "@/components/common/connect-button/connect-button";
 
-const Navigation = () => (
-  <ContentWrapper>
-    <Flex
-      justifyContent="space-between"
-      alignItems="center"
-    >
-      <Image
-        width="120px"
-        src="/logo.svg"
-        alt="LooksRare NFT viewer logo"
-      />
-      <Button
-        width={12}
-        height={12}
+const Navigation = () => {
+  return (
+    <ContentWrapper>
+      <Flex
+        justifyContent="space-between"
+        alignItems="center"
       >
-        <WalletIcon width="20px" height="20px" />
-      </Button>
-    </Flex>
-  </ContentWrapper>
-);
+        <Image
+          width="120px"
+          src="/logo.svg"
+          alt="LooksRare NFT viewer logo"
+        />
+        <CustomConnectButton />
+      </Flex>
+    </ContentWrapper>
+  );
+}
 
 export default Navigation;
