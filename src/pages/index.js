@@ -20,7 +20,7 @@ export default function Home() {
       <main>
         <ContentWrapper>
           <Container py={50} maxW="md">
-            <Text mb={3}>Search for NFT:</Text>
+            <Text mb={3}>Get details for NFT:</Text>
             <Form />
             <Text my={10} align="center">or</Text>
             <Link as={NextLink} href={BAYC1Link}>
