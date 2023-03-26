@@ -7,7 +7,7 @@ import ContentWrapper from "@/components/common/content-wrapper/contentWrapper";
 import Form from "@/components/home/form/form";
 
 export default function Home() {
-  const BAYC1Link = "/collections/0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D/1";
+  const BAYC1Link = "/token/0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D/1";
 
   return (
     <>

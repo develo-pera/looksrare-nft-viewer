@@ -7,6 +7,7 @@ import {
 import { configureChains, createClient, WagmiConfig } from "wagmi";
 import { mainnet } from "wagmi/chains";
 import { publicProvider } from "wagmi/providers/public";
+import { QueryClient, QueryClientProvider } from "react-query";
 
 import "@rainbow-me/rainbowkit/styles.css";
 import "@/styles/main.scss";
@@ -30,6 +31,8 @@ const wagmiClient = createClient({
   provider
 });
 
+const queryClient = new QueryClient();
+
 export default function App({ Component, pageProps }) {
   const getLayout = Component.getLayout ?? ((page) => page);
 
@@ -37,9 +40,11 @@ export default function App({ Component, pageProps }) {
     <ChakraProvider theme={theme}>
       <WagmiConfig client={wagmiClient}>
         <RainbowKitProvider theme={darkTheme()} chains={chains}>
-          {
-            getLayout(<Component {...pageProps} />)
-          }
+          <QueryClientProvider client={queryClient}>
+            {
+              getLayout(<Component {...pageProps} />)
+            }
+          </QueryClientProvider>
         </RainbowKitProvider>
       </WagmiConfig>
     </ChakraProvider>
